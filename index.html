@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .rsvp {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .rsvp form {
+            display: inline-block;
+        }
+
+        .rsvp input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .rsvp input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wedding Invitation</h1>
+        <p>Dear [Guest Name],</p>
+        <p>We are delighted to invite you to the wedding of [Bride Name] and [Groom Name].</p>
+        <p>The ceremony will take place on [Date] at [Time] in [Location].</p>
+        <p>Following the ceremony, there will be a reception at [Reception Location].</p>
+        <p>We hope you can join us for this special occasion as we celebrate the love between [Bride Name] and [Groom Name].</p>
+        
+        <div class="rsvp">
+            <p>Please RSVP by [RSVP Date] by clicking the button below:</p>
+            <form action="process_rsvp.php" method="post">
+                <input type="submit" value="RSVP Now">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
