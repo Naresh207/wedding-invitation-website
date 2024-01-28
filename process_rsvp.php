@@ -1,17 +1,18 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $guestName = $_POST["guestName"]; // Replace "guestName" with the actual name attribute of your form input
-    // Add more variables for other form fields as needed
+    // Get the guest name from the form
+    $guestName = $_POST["guestName"];
 
-    // Process the data (you can save it to a database, send emails, etc.)
+    // Your email configuration
+    $to = "scmente207@gmail.com"; // Replace with your email address
+    $subject = "RSVP Confirmation";
+    $message = "Thank you, $guestName, for RSVPing to the wedding! We look forward to seeing you.";
 
-    // For now, let's just echo the submitted data
-    echo "RSVP received from: " . $guestName;
-} else {
-    // Redirect if the form is accessed directly without submission
-    header("Location: index.html");
+    // Send the email
+    mail($to, $subject, $message);
+
+    // Redirect the user to a thank you page
+    header("Location: thank_you.html"); // Create a thank_you.html page
     exit();
 }
-
 ?>
